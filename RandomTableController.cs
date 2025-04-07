@@ -1,4 +1,6 @@
+using System.Net;
 using Microsoft.AspNetCore.Mvc;
+using NSwag.Annotations;
 
 namespace RandomTableApi;
 
@@ -9,10 +11,12 @@ public class RandomTableController: Controller {
     private RandomTableDAL dal = new RandomTableDAL();
 
     [HttpGet]
-    [Route("MaleName")]
-    public ActionResult<List<Item>> GetMaleName()
+    [Route("Item")]
+    [SwaggerResponse(HttpStatusCode.OK, typeof(Item))]
+    public ActionResult<Item> GetItem()
     {
-        return dal.GetMaleName();
-    }
+        Item item = dal.GetRandomName();
 
+        return Ok(item);
+    }
 }

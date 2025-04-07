@@ -1,13 +1,15 @@
 namespace RandomTableApi;
 
+
 public class Item
 {
-    string Name = string.Empty;
-    string Rarity = string.Empty;
-    string Type = string.Empty;
-    string Value = string.Empty;
-    bool Attunement = false;
-    string Description = string.Empty;
-    string Location = string.Empty;
-    string Quantity = string.Empty;
+
+    public string Name = string.Empty;
+    public string Rarity = string.Empty;
+    public string Type = string.Empty;
+    public string Value = string.Empty;
+    public bool Attunement = false;
+    public string Description = string.Empty;
+    public string Location = string.Empty;
+    public string Quantity = string.Empty;
 }
